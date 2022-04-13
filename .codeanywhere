@@ -2,10 +2,7 @@
   "services": [
     {
       "name": "rte",
-      "build": {
-        "context": ".",
-        "dockerfile": ".codeanywhere-dockerfile"
-      },
+      "image": "webdevops/php-dev",
       "env": [],
       "volumeMounts": [],
       "limits": {
