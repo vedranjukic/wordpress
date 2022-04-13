@@ -1,0 +1,38 @@
+{
+  "services": [
+    {
+      "name": "rte",
+      "build": {
+        "context": ".",
+        "dockerfile": ".codeanywhere-dockerfile"
+      },
+      "env": [],
+      "volumeMounts": [],
+      "limits": {
+        "cpu": 1,
+        "memory": 4
+      }
+    },
+    {
+      "name": "db",
+      "image": "mysql",
+      "env": [
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "value": "testpass1234"
+        },
+        {
+          "name": "MYSQL_DATABASE",
+          "value": "wordpress"
+        }
+      ],
+      "volumeMounts": [],
+      "limits": {
+        "cpu": 1,
+        "memory": 4
+      }
+    }
+  ],
+  "volumes": [],
+  "tasks": []
+}
